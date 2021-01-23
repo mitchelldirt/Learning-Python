@@ -1,0 +1,41 @@
+vegetables = {"Broccoli": "A yucky green veggie",
+              "Carrot": "An orange log",
+              "Lettuce": "Food for cows",
+              "Mushroom": "The best on burgers",
+              "Radish": "What the hell is a radish"
+              }
+
+# ordered_keys = list(vegetables.keys())
+# ordered_keys.sort()
+# ordered_keys = sorted(list(vegetables.keys()))
+# for v in ordered_keys:
+#     print(v + " - " + vegetables[v])
+# for v in sorted(vegetables.keys()):
+#     print(v + " - " + vegetables[v])
+#
+# print("*" * 80)
+#
+# for val in vegetables.values():
+#     print(val)
+#
+# print("*" * 80)
+#
+# for key in vegetables:
+#     print(vegetables[key])
+#
+# print("*" * 80)
+#
+# vegetables_keys = vegetables.keys()
+# print(vegetables_keys)
+#
+# vegetables["onion"] = "No bueno"
+# print(vegetables_keys)
+print(vegetables.items())
+v_tuple = tuple(vegetables.items())
+print(v_tuple)
+
+for snack in v_tuple:
+    item, description = snack
+    print(item + " is " + description)
+
+print(dict(v_tuple))
