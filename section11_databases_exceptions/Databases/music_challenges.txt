@@ -1,0 +1,67 @@
+CHALLENGE 1 & 2 SOLUTION:
+
+SELECT songs.title FROM songs
+INNER JOIN albums ON songs.album = albums._id
+WHERE albums.name="Forbidden";
+
+CHALLENGE 3 SOLUTION:
+
+SELECT songs.track, songs.title FROM songs
+INNER JOIN artists ON albums.artist = artists._id
+INNER JOIN albums ON songs.album = albums._id
+WHERE artists.name="Deep Purple"
+ORDER BY songs.track;
+
+CHALLENGE 4 SOLUTION:
+
+UPDATE artists SET name = "One Kitten" WHERE artists.name = "Mehitabel";
+
+CHALLENGE 5:
+
+SELECT songs.title FROM songs
+INNER JOIN artists ON albums.artist = artists._id
+INNER JOIN albums ON songs.album = albums._id
+WHERE artists.name="Aerosmith"
+ORDER BY songs.title;
+
+CHALLENGE 6:
+ANSWER: 151
+
+SELECT count(songs.title) FROM songs
+INNER JOIN artists ON albums.artist = artists._id
+INNER JOIN albums ON songs.album = albums._id
+WHERE artists.name="Aerosmith";
+
+CHALLENGE 7:
+
+SELECT DISTINCT songs.title FROM songs
+INNER JOIN artists ON albums.artist = artists._id
+INNER JOIN albums ON songs.album = albums._id
+WHERE artists.name="Aerosmith"
+ORDER BY songs.title;
+
+CHALLENGE 8:
+ANSWER: 128
+
+SELECT count(DISTINCT songs.title) FROM songs
+INNER JOIN artists ON albums.artist = artists._id
+INNER JOIN albums ON songs.album = albums._id
+WHERE artists.name="Aerosmith";
+
+CHALLENGE 9:
+ANSWER: 1
+
+SELECT count(DISTINCT artists.name) FROM songs
+INNER JOIN artists ON albums.artist = artists._id
+INNER JOIN albums ON songs.album = albums._id
+WHERE artists.name="Aerosmith";
+
+CHALLENGE 10:
+ANSWER: 13
+
+SELECT count(DISTINCT albums.name) FROM songs
+INNER JOIN artists ON albums.artist = artists._id
+INNER JOIN albums ON songs.album = albums._id
+WHERE artists.name="Aerosmith";
+
+
