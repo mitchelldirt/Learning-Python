@@ -3,9 +3,7 @@ def sun_angle(time: str):
     times = time.split(':')
     hours = int(times[0])
     minutes = int(times[1])
-    if hours < 6:
-        return "I don't see the sun!"
-    if hours >= 18 and minutes > 0:
+    if hours < 6 or hours >= 18 and minutes > 0:
         return "I don't see the sun!"
     if hours == 6 and minutes == 0:
         return 0
